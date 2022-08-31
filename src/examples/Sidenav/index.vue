@@ -12,7 +12,7 @@
       ></i>
       <a class="m-0 navbar-brand" href="/">
         <img :src="logo" class="navbar-brand-img h-100" alt="main_logo" />
-        <!-- <span class="ms-1 font-weight-bold"><font class="font-sidebar">Vue Project</font></span> -->
+        <span class="ms-1 font-weight-bold"><font class="font-sidebar">Vue Project</font></span>
       </a>
     </div>
     <hr class="mt-0 horizontal dark" />
@@ -24,12 +24,6 @@
   .font-sidebar {
       font-weight: bold;
       text-transform: uppercase;
-  }
-
-  .sidenav .navbar-brand, .sidenav .navbar-heading {
-      display: flex;
-      justify-content: center;
-      align-content: center;
   }
 </style>
 
