@@ -1,71 +1,122 @@
 # Change Log
 
-## [1.1.0] 2021-03-19
-### Bug fixing
-- Rename `master` branch to `main`
-- To make a lot of our changes, we've followed the instructions from here (minus the `colors` and `font-sizes`): https://tailwindcss.com/docs/upgrading-to-v2
-  - For the colors, the only change that we made, is the fact that we've added all Tailwind CSS colors to our `tailwind.config.js` files, and inside our product, all `{type}-gray-{number}` classes were renamed to `{type}-blueGray-{number}`
-  - After that, we've changed `{type}-blueGray-{number}` to `{type}-blueGray-{lower-number}`, i.e. (`100` became `50`, `200` became `100`, ..., `900` became `800`)
-    - You can achieve this, by search in your whole project for `blueGray-100` and replace it with `blueGray-50`
-    - Then, you search in your whole project for `blueGray-200` and replace it with `blueGray-100`
-    - Then, you search in your whole project for `blueGray-300` and replace it with `blueGray-200`
-    - Then, you search in your whole project for `blueGray-400` and replace it with `blueGray-300`
-    - Then, you search in your whole project for `blueGray-500` and replace it with `blueGray-400`
-    - Then, you search in your whole project for `blueGray-600` and replace it with `blueGray-500`
-    - Then, you search in your whole project for `blueGray-700` and replace it with `blueGray-600`
-    - Then, you search in your whole project for `blueGray-800` and replace it with `blueGray-700`
-    - Then, you search in your whole project for `blueGray-900` and replace it with `blueGray-800`
-  - For the colors, the only change that we made, is the fact that we've added all Tailwind CSS colors to our `tailwind.config.js` files, and inside our product, all `{type}-blue-{number}` classes were renamed to `{type}-lightBlue-{number}`
-  - For the colors, the only change that we made, is the fact that we've added all Tailwind CSS colors to our `tailwind.config.js` files, and inside our product, all `{type}-green-{number}` classes were renamed to `{type}-emerald-{number}`
-- `lg:bg-transparent` is not working anymore, so we've changed it with `lg:bg-opacity-0`
-- https://github.com/creativetimofficial/notus-angular/issues/4
-- https://github.com/creativetimofficial/notus-js/issues/4
-- https://github.com/creativetimofficial/notus-js/pull/5
-- https://github.com/creativetimofficial/notus-js/pull/6
-- https://github.com/creativetimofficial/notus-nextjs/issues/6
-- https://github.com/creativetimofficial/notus-nextjs/issues/7
-- https://github.com/creativetimofficial/notus-nextjs/issues/8
-- https://github.com/creativetimofficial/notus-react/issues/3
-- https://github.com/creativetimofficial/notus-svelte/issues/3
-- https://github.com/creativetimofficial/notus-svelte/issues/6
-- https://github.com/creativetimofficial/vue-notus/pull/4/
-### Major style changes
-- The upgrade of Tailwind CSS from version 1 to version 2, will cause multiple style changes, check them out on the official Tailwind CSS websites:
-  - https://blog.tailwindcss.com/tailwindcss-v2
-  - https://tailwindcss.com/
-  - https://tailwindcss.com/docs/upgrading-to-v2
-### Deleted components
-### Added components
-### Deleted dependencies
-- `@tailwindcss/custom-forms`
-- `babel-eslint` (updated to `@babel/eslint-parser` and `@babel/core`)
-### Added dependencies
-- `@tailwindcss/forms` (replaces `@tailwindcss/custom-forms`)
-- `autoprefixer`
-- `postcss`
-- `@babel/core` (instead of `babel-eslint`)
-- `@babel/eslint-parser` (instead of `babel-eslint`)
-- `@vue/compiler-sfc`
-### Updated dependencies
-```
-@fortawesome/fontawesome-free   5.14.0   →    5.15.3
-@popperjs/core                   2.5.1   →    2.9.1
-chart.js                         2.9.3   →    2.9.4
-core-js                          3.6.5   →    3.9.1
-tailwindcss                     1.8.10   →    2.0.4
-vue                             2.6.12   →    3.0.7
-vue-router                       3.4.3   →    4.0.5
-@vue/cli-plugin-babel            4.5.6   →    5.0.0-alpha.7
-@vue/cli-plugin-eslint           4.5.6   →    5.0.0-alpha.7
-@vue/cli-service                 4.5.6   →    5.0.0-alpha.7
-eslint                           6.8.0   →    7.22.0
-eslint-plugin-vue                6.2.2   →    7.7.0
-```
-### Warning
-_On a clean install there may be some warnings from request, chokidar, fsevents - they come from node_modules, and they do not affect the product at all._
-_The following warning will show when doing a clean install `npm WARN cache-loader@4.1.0 requires a peer of webpack@^4.0.0 but none is installed. You must install peer dependencies yourself.`, however it does not affect in any way the product._
+## [3.0.0] 2022-06-24
 
-## [1.0.0] 2020-09-29
-### Original Release
-- Started project from [Tailwind Starter Kit by Creative Tim](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation?ref=vn-changelog)
-- Added design from Tailwind Starter Kit by Creative Tim
+- Renamed components name prefix from Vsud to Soft.
+
+## [2.0.0] 2022-03-30
+
+### Bug fixing
+
+### Major style changes
+
+- VsudAlert `icon` prop updated with empty default value.
+- VsudAvatar `img` prop updated with `required: true` attribute.
+- VsudInput `isValid` prop removed and added <code>`success`</code> and <code>`error`</code> props instead.
+- VsudInput `placeholder` prop set with default value of `Type here...` .
+- VsudInput `type` prop set with default value of `text`.
+- VsudInput `isRequired` prop updated with default value of `false`.
+- VsudPagination `color` set to default value of `success`.
+- VsudPagination `size`set to default value of `md`.
+- VsudButton `color` prop updated from `info` to `success` color.
+- VsudCheckbox `checked` prop updated from `string` to `boolean`.
+- VsudProgress `color` prop updated from `primary` to `success`.
+- VsudProgress `percentage` prop is now `required` and updated from `string` to `Number`.
+- VsudRadio `name`, and <code>`id`</code> props are now set to `required.`
+- VsudRadio `checked` prop type changed from `string` to `boolean` and default value set to `false`.
+- VsudSwitch `name`, and `id` prop values are `required` now.
+- VsudSwitch `checked` prop type `changed` from `string` to `boolean`.
+- VsudSwitch `inputClass` prop removed and can directly be accessed using `class`.
+- VsudTextArea `id` prop is set to `required` now.
+- VsudTextArea `placeholder` prop has now a default text.
+- Renamed `Card` component to `MiniStatisticsCard`.
+- MiniStatisticsCard `title` prop accepts `String` and `Object` with `text` and `color` keys.
+- MiniStatisticsCard `value` prop accepts `Number`, `String`, and `Object` with `text`, and `color` keys.
+- MiniStatisticsCard `percentage` prop accepts `String` and `Object` with `value` and `color` keys. The default `color` is set to `text-success`.
+- MiniStatisticsCard `icon` prop accepts `String` and `Object` with `component` and `background` keys. The default `background` color is set to `bg-white`.
+- MiniStatisticsCard `classContent` prop accepts a `string` to apply custom class around the content.
+- DefaultInfoCard `classIcon` prop is renamed to `icon`.
+- DefaultInfoCard `icon` prop can accept a `String` or `Object` with `component` and `background` keys.
+- DefaultInfoCard `title` prop’s value is set to `required`.
+- DefaultInfoCard `price` prop is renamed to `value` with the acceptable types of `String`, and `Number`.
+- MasterCard `props` refactored to a single `card` object prop with the following keys:
+  - `number` accepts a `String` with the default value of `7852 4594 1122 4562`.
+  - `holderText` accepts a `String` with the default value of `Card Holder`.
+  - `holderName` accepts a `String` with the default value of `Jack Peterson`.
+  - `expiryText` accepts a `String` with the default value of `Expirs`.
+  - `expiryDate` accepts a `String` with the default value of `11/22`.
+  - `background` accepts a `String` with the default value of `dark`.
+- Added `MiniPlayerCard` component with `color`, and `song` props.
+- Renamed `NewTabCard` to `PlaceHolderCard`.
+- Added `icon`, and `title` prop type of object with `variant` and `text` keys to PlaceholderCard.
+- Deleted `TransactionsCard` and `RevenueCard` components and added new `RankingList` and `RankingListCard` component instead.
+- Added `card` object prop with `title`, `subtitle`, `date` keys to `RankingListCard` component.
+- Added boolean `HorizontalBreak` and array `item` props with `title`, `date`, `amount`, `icon`, `color` keys to `RankingListCard` component.
+- Added `id`, `height`, `title`, `description` and `chart` props to `GradientLineChart`. The `chart` has `Object` data type with the following keys:
+  - `labels` has `Array` data type.
+  - `datasets` has `Array` data type with the following keys:
+    - `label` has `String` data type.
+    - `data` has `Array` data type.
+- Renamed `ActiveUsersChart` component to `ReportsBarChart`.
+- Added Added `id`, `color`, `title`, `description`, `chart`, and `items` props to `ReportsBarChart`. The `items` prop has `Array` data type and the `chart` has `Object` data type with the following keys:
+  - `labels` has `Array` data type.
+  - `datasets` has `Object` data type with the following keys:
+    - `label` has `String` data type.
+    - `data` has `Array` data type.
+- Updated `BillingCard` with the `title` and `bills` props.
+- Renamed `CardCalendar` component to `CalendarCard` component and added `items` prop type of array with `time` and `description` keys.
+- Renamed `ProjectOverviewCard` component to `DefaultProjectCard` component and added the following props: `image`, `label`, `title`, `description`, `action`, and `authors` props.
+- Renamed `CardEmail` component to `EmailCard` component and Added `route`, `text`, and `tooltip` props.
+- Renamed `CardMessage` component to `MessageCard` component.
+- Added `title`, and `messages` prop type of array with the `route`, `tooltip`, and `images` keys to MessageCard.
+- Renamed `PaymentCard` component to `PaymentMethodsCard` component.
+- Renamed `ProfileCard` component to `ProfileInfoCard` and added the following props: `title`, `description`, `info`, `social`, and `action`.
+- Deleted `TimelineCard` component and added `TimelineList` and `TimelineItem` components.
+- Added `title`, `description` and `darkMode` props to TimelineList component.
+- Added `color`, `icon`, `title`, `dateTime`, `description`, `badges`, and `darkMode` props to TimelineItem component.
+- Renamed `CardToDo` component to `TodoCard` component.
+- Added `todos` prop to `TodoCard` component.
+
+### Deleted components
+
+```
+@/components/Icon.vue
+```
+
+### Added components
+
+```
+@/components/Icon/Air.vue
+@/components/Icon/Basket.vue
+@/components/Icon/Box3d.vue
+@/components/Icon/CreditCard.vue
+@/components/Icon/CustomerSupport.vue
+@/components/Icon/Document.vue
+@/components/Icon/GettingStarted.vue
+@/components/Icon/Humidity.vue
+@/components/Icon/Lights.vue
+@/components/Icon/Office.vue
+@/components/Icon/Settings.vue
+@/components/Icon/Shop.vue
+@/components/Icon/Spaceship.vue
+@/components/Icon/Switches.vue
+@/components/Icon/Temperature.vue
+@/components/Icon/Wifi.vue
+
+```
+
+### Deleted dependencies
+
+### Added dependencies
+
+```
+@fortawesome/vue-fontawesome
+```
+
+### Updated dependencies
+
+### Warning
+
+## [1.0.0] 2022-01-27
+
+### Initial Release
