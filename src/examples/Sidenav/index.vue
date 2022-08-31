@@ -12,16 +12,30 @@
       ></i>
       <a class="m-0 navbar-brand" href="/">
         <img :src="logo" class="navbar-brand-img h-100" alt="main_logo" />
-        <span class="ms-1 font-weight-bold">Soft UI Dashboard PRO</span>
+        <!-- <span class="ms-1 font-weight-bold"><font class="font-sidebar">Vue Project</font></span> -->
       </a>
     </div>
     <hr class="mt-0 horizontal dark" />
     <sidenav-list :cardBg="customClass" />
   </aside>
 </template>
+
+<style>
+  .font-sidebar {
+      font-weight: bold;
+      text-transform: uppercase;
+  }
+
+  .sidenav .navbar-brand, .sidenav .navbar-heading {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+  }
+</style>
+
 <script>
 import SidenavList from "./SidenavList.vue";
-import logo from "@/assets/img/logo-ct.png";
+import logo from "@/assets/logo/icon.png";
 import { mapState } from "vuex";
 
 export default {
