@@ -7,6 +7,8 @@ import Profile from "@/views/Profile.vue";
 import Rtl from "@/views/Rtl.vue";
 import SignIn from "@/views/SignIn.vue";
 import SignUp from "@/views/SignUp.vue";
+import StaffManagementTool from "@/views/StaffManagementTool.vue";
+import UsersList from "@/views/UsersList.vue";
 
 const routes = [
   {
@@ -53,6 +55,16 @@ const routes = [
     path: "/sign-up",
     name: "Sign Up",
     component: SignUp,
+  },
+  {
+    path: "/staff-management-tool",
+    name: "Staff Management Tool v.1",
+    component: StaffManagementTool,
+  },
+  {
+    path: "/users-list",
+    name: "Users List",
+    component: UsersList,
   },
 ];
 

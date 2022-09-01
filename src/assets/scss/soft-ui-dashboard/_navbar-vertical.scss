@@ -6,7 +6,7 @@
   .navbar-brand > img,
   .navbar-brand-img {
     max-width: 100%;
-    max-height: 2rem;
+    max-height: 80px;
   }
   // Navbar navigaton
   .navbar-nav {
@@ -189,7 +189,10 @@
 
   .navbar-brand,
   .navbar-heading {
-    display: block;
+    // display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   @include media-breakpoint-up(xl) {
     &:hover {
@@ -218,7 +221,8 @@
   }
 
   .navbar-brand {
-    padding: 1.5rem 2rem;
+    // padding: 1.5rem 2rem;
+    padding: 0px;
   }
 }
 

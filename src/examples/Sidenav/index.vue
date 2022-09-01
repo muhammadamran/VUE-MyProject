@@ -12,7 +12,7 @@
       ></i>
       <a class="m-0 navbar-brand" href="/">
         <img :src="logo" class="navbar-brand-img h-100" alt="main_logo" />
-        <span class="ms-1 font-weight-bold"><font class="font-sidebar">Vue Project</font></span>
+        <!-- <span class="ms-1 font-weight-bold"><font class="font-sidebar">Vue Project</font></span> -->
       </a>
     </div>
     <hr class="mt-0 horizontal dark" />
@@ -29,7 +29,7 @@
 
 <script>
 import SidenavList from "./SidenavList.vue";
-import logo from "@/assets/logo/icon.png";
+import logo from "@/assets/logo/logo.png";
 import { mapState } from "vuex";
 
 export default {

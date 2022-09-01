@@ -4,6 +4,7 @@
   .navbar-brand {
     color: $dark;
     @include font-size($font-size-sm);
+    background: linear-gradient(310deg, #82d616 0%, #82d616 100%)
   }
   .nav-link {
     color: $dark;
