@@ -15,21 +15,21 @@
       <li class="nav-item">
         <sidenav-collapse navText="Dashboard" :to="{ name: 'Dashboard' }">
           <template #icon>
-            <shop />
+            <Shop />
           </template>
         </sidenav-collapse>
       </li>
       <li class="nav-item">
         <sidenav-collapse navText="Tables" :to="{ name: 'Tables' }">
           <template #icon>
-            <office />
+            <Office />
           </template>
         </sidenav-collapse>
       </li>
       <li class="nav-item">
         <sidenav-collapse navText="Billing" :to="{ name: 'Billing' }">
           <template #icon>
-            <credit-card />
+            <CreditCard />
           </template>
         </sidenav-collapse>
       </li>
@@ -41,10 +41,43 @@
           SHARED
         </h6>
       </li>
+      <!-- Staff Management Tools V1 -->
       <li class="nav-item">
-        <sidenav-collapse navText="Staff Management Tool v.1" :to="{ name: 'Staff Management Tool v.1' }">
+        <sidenav-collapse navText="Staff Man. Tool" :to="{ name: 'Staff Management Tool' }">
           <template #icon>
-            <users-list />
+            <StaffManTool />
+          </template>
+        </sidenav-collapse>
+      </li>
+      <!-- KNIT-ID -->
+      <li class="nav-item">
+        <sidenav-collapse navText="KNIT - ID Note" :to="{ name: 'KNIT ID' }">
+          <template #icon>
+            <StaffManTool />
+          </template>
+        </sidenav-collapse>
+      </li>
+      <!-- ITID-Asset List -->
+      <li class="nav-item">
+        <sidenav-collapse navText="ITID - Asset List" :to="{ name: 'IT ID' }">
+          <template #icon>
+            <StaffManTool />
+          </template>
+        </sidenav-collapse>
+      </li>
+      <!-- KPI Progress ID -->
+      <li class="nav-item">
+        <sidenav-collapse navText="KPI Progress ID" :to="{ name: 'KPI ID' }">
+          <template #icon>
+            <StaffManTool />
+          </template>
+        </sidenav-collapse>
+      </li>
+      <!-- Cost Tracker 2021-2022 -->
+      <li class="nav-item">
+        <sidenav-collapse navText="Cost Tracker" :to="{ name: 'Cost Tracker' }">
+          <template #icon>
+            <StaffManTool />
           </template>
         </sidenav-collapse>
       </li>
@@ -59,7 +92,7 @@
       <li class="nav-item">
         <sidenav-collapse navText="Users List" :to="{ name: 'Users List' }">
           <template #icon>
-            <users-list />
+            <UsersList />
           </template>
         </sidenav-collapse>
       </li>
@@ -72,6 +105,7 @@ import Shop from "../../components/Icon/Shop.vue";
 import Office from "../../components/Icon/Office.vue";
 import CreditCard from "../../components/Icon/CreditCard.vue";
 import UsersList from "../../components/Icon/CustomerSupport.vue";
+import StaffManTool from "../../components/Icon/Document.vue";
 
 export default {
  
@@ -81,6 +115,7 @@ export default {
     Office,
     CreditCard,
     UsersList,
+    StaffManTool,
   },
   methods: {
     getRoute() {
