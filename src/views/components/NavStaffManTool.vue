@@ -5,8 +5,8 @@
         <a
           class="nav-link mb-0 px-0 py-1 active active"
           data-bs-toggle="tab"
-          role="tab"
-          href="../../../examples/pages/account/billing.html"
+          role="tabJoined"
+          href=""
           aria-selected="true"
           >Joined</a
         >
@@ -15,8 +15,8 @@
         <a
           class="nav-link mb-0 px-0 py-1"
           data-bs-toggle="tab"
-          href="../../../examples/pages/account/billing.html"
-          role="tab"
+          href=""
+          role="tabTransferKN"
           aria-selected="false"
           >Transfer KN</a
         >
@@ -25,8 +25,8 @@
         <a
           class="nav-link mb-0 px-0 py-1"
           data-bs-toggle="tab"
-          href="../../../examples/pages/account/invoice.html"
-          role="tab"
+          href=""
+          role="tabLeaver"
           aria-selected="false"
           >Leaver</a
         >
